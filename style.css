@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+img {
+    height: 30px;
+    width: 30px;
+}
 :root {
     --primary-color: rgb(87, 135, 199);
     --secondary-color: rgb(221, 188, 1);
@@ -32,7 +36,6 @@ body {
     padding: 10px;
     gap: 20px;
     align-items: center;
-    border: 2px solid green;
     margin-left: 20px;
 }
 
@@ -69,10 +72,14 @@ body {
     margin-left: 20px;
 }
 
+.nav-links:nth-of-type(2) {
+    margin-top: 30px;
+}
+
 .nav-links li {
     list-style-type: none;
     display: flex;
-    margin-top: 40px;
+    margin-top: 20px;
     align-items: center;
 }
 
@@ -81,8 +88,6 @@ body {
 }
 
 .nav-links li img {
-    height: 20px;
-    width: 20px;
     margin-right: 20px;
 }
 
@@ -97,6 +102,11 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 5px 20px;
+}
+
+.top-bar div img {
+    height: 25px;
+    width: 25px;
 }
 
 .bottom-bar {
@@ -152,6 +162,9 @@ body {
 
 .projects-card {
     border-left: 8px solid var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 6px rgba(120, 120, 120, 0.1);
@@ -161,10 +174,17 @@ body {
 .card-description {
     margin-top: 5px;
 }
+
 .card-buttons {
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
+}
+
+.card-buttons img {
+    margin-left: 20px;
+    height: 20px;
+    width: 20px;
 }
 
 .news-feed {
