@@ -2,6 +2,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 img {
@@ -9,7 +20,7 @@ img {
     width: 30px;
 }
 :root {
-    --primary-color: rgb(77, 159, 226);
+    --primary-color: rgb(73, 151, 214);
     --secondary-color: rgb(221, 188, 1);
     --background-color: rgb(221, 227, 236);
 }
@@ -29,6 +40,7 @@ body {
     gap: 30px;
     color: white;
     align-items: start;
+    font-weight: 700;
 }
 
 .sidebar-header {
@@ -36,7 +48,7 @@ body {
     padding: 10px;
     gap: 20px;
     align-items: center;
-    margin-left: 20px;
+    margin: 20px 0 0 10px;
 }
 
 .logo {
@@ -91,6 +103,14 @@ body {
     margin-right: 20px;
 }
 
+.nav-links li img:hover {
+    opacity: 0.8;
+}
+
+.nav-links a {
+    color: white;
+}
+
 .top {
     height: fit-content;
     display: flex;
@@ -119,10 +139,17 @@ body {
 #search {
     background-color: var(--background-color);
     margin-left: 20px;
+    padding: 0 20px 2px 20px;
     border: none;
     border-radius: 40px;
     height: 30px;
     flex: 1;
+    font-size: 18px;
+}
+
+#search:focus {
+    outline: 1px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 .profile-top {
@@ -130,6 +157,8 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 200px;
+    margin-left: 20px;
+    font-weight: 500;
 }
 
 .profile-top img:nth-of-type(1) {
@@ -163,6 +192,22 @@ body {
     width: 80px;
 }
 
+.greeting {
+    font-size: 12px;
+    align-self: end;
+}
+
+.user {
+    font-size: 24px;
+    font-weight: 700;
+    align-self: start;
+}
+
+.username:hover {
+    text-decoration:none;
+    cursor: hover;
+}
+
 img[src="./media/profile-img.svg"] {
     background-color: black;
     border-radius: 100%;
@@ -183,6 +228,13 @@ img[src="./media/profile-img-4.svg"] {
     border-radius: 100%;
 }
 
+.profile-top img:hover,
+.profile-bottom img:hover,
+.trending-card img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
 .action-buttons {
     display: flex;
     justify-content: space-between;
@@ -197,6 +249,13 @@ img[src="./media/profile-img-4.svg"] {
     background-color: var(--primary-color);
     border: 0;
     color: white;
+    font-weight: 600;
+    font-size: 16px
+}
+
+.action-buttons button:hover {
+    background-color:rgb(63, 129, 184);
+    cursor: pointer;
 }
 
 .dashboard {
@@ -206,8 +265,8 @@ img[src="./media/profile-img-4.svg"] {
 
 .projects {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 9fr);
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
     gap: 30px;
     padding: 10px;
     margin-top: 50px;
@@ -226,7 +285,7 @@ img[src="./media/profile-img-4.svg"] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10px;
+    padding: 30px 10px;
     border-radius: 10px;
     box-shadow: 4px 4px 6px rgba(120, 120, 120, 0.4);
     background-color: white;
@@ -246,6 +305,11 @@ img[src="./media/profile-img-4.svg"] {
     margin-left: 20px;
     height: 20px;
     width: 20px;
+}
+
+.card-buttons img:hover {
+    filter: invert(61%) sepia(14%) saturate(2075%) hue-rotate(169deg) brightness(88%) contrast(89%);
+    cursor: pointer;
 }
 
 .news-feed {
@@ -278,8 +342,15 @@ img[src="./media/profile-img-4.svg"] {
     width: 250px;
 }
 
+.announcement-title {
+    font-weight: 600;
+    font-size: 16px;
+}
+
 .announcement-description {
     margin-top: 5px;
+    font-weight: 300;
+    font-size: 14px;
 }
 
 .announcement:nth-of-type(2) {
@@ -308,6 +379,10 @@ img[src="./media/profile-img-4.svg"] {
     justify-content: start;
     align-items: center;
     margin: 20px 10px 0px 10px;
+}
+
+.account-handle {
+    font-weight: 600;
 }
 
 .account-info {
